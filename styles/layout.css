@@ -1,3 +1,7 @@
+:root {
+  --box-height: 90vh;
+}
+
 html {
   font-family: 'Roboto', 'Open Sans', 'Arial', 'sans-serif';
 }
@@ -10,7 +14,7 @@ html {
 
 .box {
   border: 0.25rem black solid;
-  height: 84vh;
+  height: var(--box-height);
 }
 
 #textarea {
@@ -18,18 +22,8 @@ html {
   word-wrap:break-word;
 }
 
-.title-holder {
-  display: flex;
-  justify-content: center;
-}
-.title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  padding-bottom: 0.5rem;
-}
-
-.CodeMirror {
-  height: 84vh;
+.CodeMirror, .svg-holder{
+  height: var(--box-height);
 }
 
 button {
