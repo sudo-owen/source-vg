@@ -1,6 +1,7 @@
 let code = CodeMirror.fromTextArea(document.getElementById("textarea"), {
   lineWrapping: true,
-  theme: 'monokai'
+  theme: 'monokai',
+  lineNumbers: true
 });
 
 let parser = new DOMParser();
@@ -15,11 +16,24 @@ $(document).ready( function() {
   // 
   $(".render").click(function() {
     let svg = makeSVG(code.getValue(), 'svg');
-    // svg.removeAttribute('viewBox');
-    // svg.setAttribute('viewBox', '0 0 500 500');
-    // svg.setAttribute('preserveAspectRatio', 'xMinYMin meet')
+
+    // Auto-resize
+    if ($(".resize")[0].checked) {
+      let attributes = ['width', 'height'];
+      for (let a of attributes) {
+        svg.removeAttribute(a);
+      }
+      svg.setAttribute('width', '100%');
+      svg.setAttribute('height', '83vh');
+      svg.setAttribute('preserveAspectRatio', 'xMinYMin meet')
+    }
+
+    // Show new SVG
     $(".svg-holder").find(':first-child').remove();
     $(".svg-holder").append(svg);
+
+    // Allow for drag/zoom
+    svgPanZoom($("svg")[0]);
   });
 
   $(".inputfile").change(function(e) {

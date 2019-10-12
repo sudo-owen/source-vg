@@ -1,3 +1,7 @@
+html {
+  font-family: 'Roboto', 'Open Sans', 'Arial', 'sans-serif';
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -20,7 +24,6 @@
 }
 .title {
   font-size: 1.5rem;
-  font-family: 'Roboto', 'Open Sans', 'Arial', 'sans-serif';
   font-weight: bold;
   padding-bottom: 0.5rem;
 }
@@ -53,4 +56,12 @@ button {
 	overflow: hidden;
 	position: absolute;
 	z-index: -1;
+}
+
+.resize {
+  margin-left: 0.5rem;
+}
+
+svg {
+  cursor: grab;
 }
