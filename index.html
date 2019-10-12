@@ -7,16 +7,14 @@
   
   <title>Edit SVG</title>
   
-
   <link rel="stylesheet" href="styles/codemirror.css">
   <link rel="stylesheet" href="styles/monokai.css">
   <link rel="stylesheet" type="text/css" href="styles/layout.css">
 
-
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  <script defer src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
     crossorigin="anonymous"></script>
-  <script defer src="scripts/codemirror.js"></script>
+  <script defer src="scripts/codemirror.min.js"></script>
   <script defer src="scripts/xml.js"></script>
   <script defer src="scripts/ui.js"></script>
 </head>
@@ -25,21 +23,30 @@
   <div class="grid">
     
     <div>
-      <div class="title">XML Code</div>
+      <div class="title-holder">
+        <div class="title">Code</div>
+      </div>
       <div class="box">
         <textarea id="textarea"></textarea>
-      </div>
-      <div class="render-container">
-        <button class="render">Render</button>
       </div>
     </div>
 
     <div>
-      <div class="title">SVG Image</div>
+      <div class="title-holder">
+        <div class="title">Image</div>
+      </div>
       <div class="box">
         <div class="svg-holder"></div>
       </div>
     </div>
+
+  </div>
+
+  <div class="button-container">
+    <input type="file" name="file" id="file" class="inputfile" accept=".svg,.xml"/>
+    <label for="file" class="upload option-button">📄 Upload</label>
+    <button class="render option-button">🖌️ Render</button>
+    <button class="download option-button">💾 Download</button>
   </div>
 </body>
 

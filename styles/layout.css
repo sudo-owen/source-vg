@@ -6,7 +6,7 @@
 
 .box {
   border: 0.25rem black solid;
-  height: 82vh;
+  height: 84vh;
 }
 
 #textarea {
@@ -14,6 +14,10 @@
   word-wrap:break-word;
 }
 
+.title-holder {
+  display: flex;
+  justify-content: center;
+}
 .title {
   font-size: 1.5rem;
   font-family: 'Roboto', 'Open Sans', 'Arial', 'sans-serif';
@@ -22,17 +26,31 @@
 }
 
 .CodeMirror {
-  height: 82vh;
+  height: 84vh;
 }
 
-.render-container {
-  display: flex;
-  justify-content: center;
+button {
+  all: unset;
 }
 
-.render {
-  margin-top: 1rem;
+.option-button {
+  border: 0.1rem black solid;
   cursor: pointer;
-  font-size: 1.25rem;
-  text-transform: uppercase;
+  padding: 0.5rem;
+  margin-top: 0.75rem;
+  margin-left: 0.5rem;
+}
+
+.option-button:hover {
+  background-color: rgb(36, 36, 36);
+  color: white;
+}
+
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
 }
