@@ -60,3 +60,8 @@ svg {
   cursor: grab;
   height: var(--box-height);
 }
+
+img {
+  image-rendering: -moz-crisp-edges;
+  image-rendering: pixelated;
+}
